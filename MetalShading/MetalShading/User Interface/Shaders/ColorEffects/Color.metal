@@ -2,6 +2,6 @@
 using namespace metal;
 
 [[ stitchable ]] 
-half4 color(float2 position, half4 color) {
-    return half4(position.x / 255.0, position.y / 255.0, 0.0 / 255.0, 1.0);
+half4 sizeAwareColor(float2 position, half4 color, float2 size) {
+    return half4(position.x * 2 / size.x, position.y / size.y, position.x - 1 / size.x, 1.0);
 }
