@@ -21,8 +21,9 @@ half4 timeGradient(float2 position,
                        half4 color,
                        float2 size,
                        float time) {
-    return half4(position.x / size.x,
-                 oscillate(time + (2 * M_PI_F * position.x / size.x)),
-                 oscillate(time + (2 * M_PI_F * position.y / size.y)),
+    
+    return half4(oscillate(2 * time + position.x/size.x),
+                 oscillate(4 * time + position.y/size.y),
+                 oscillate(-2 * time + position.x/size.y),
                  1.0);
 }
