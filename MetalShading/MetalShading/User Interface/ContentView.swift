@@ -1,21 +1,10 @@
-//
-//  ContentView.swift
-//  MetalShading
-//
-//  Created by Daniël Kroese on 21/01/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Color.white
+            .edgesIgnoringSafeArea(.all)
+            .colorShader()
     }
 }
 
