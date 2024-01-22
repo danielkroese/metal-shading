@@ -14,6 +14,8 @@
 		7B53A25B2B5D7EF60003B559 /* MetalShadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53A25A2B5D7EF60003B559 /* MetalShadingTests.swift */; };
 		7B53A27B2B5D808F0003B559 /* Color.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7B53A27A2B5D808F0003B559 /* Color.metal */; };
 		7B53A27D2B5D80B70003B559 /* View+ColorEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53A27C2B5D80B70003B559 /* View+ColorEffect.swift */; };
+		7BBA25F72B5F182C00358A2E /* View+DistortionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA25F62B5F182C00358A2E /* View+DistortionEffect.swift */; };
+		7BBA25F92B5F18F300358A2E /* Distortion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA25F82B5F18F300358A2E /* Distortion.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		7B53A25A2B5D7EF60003B559 /* MetalShadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalShadingTests.swift; sourceTree = "<group>"; };
 		7B53A27A2B5D808F0003B559 /* Color.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Color.metal; sourceTree = "<group>"; };
 		7B53A27C2B5D80B70003B559 /* View+ColorEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorEffect.swift"; sourceTree = "<group>"; };
+		7BBA25F62B5F182C00358A2E /* View+DistortionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DistortionEffect.swift"; sourceTree = "<group>"; };
+		7BBA25F82B5F18F300358A2E /* Distortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Distortion.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		7B53A2752B5D7FCE0003B559 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				7BBA25F52B5F180000358A2E /* DistortionEffects */,
 				7B53A2762B5D7FEA0003B559 /* ColorEffects */,
 			);
 			path = Shaders;
@@ -135,6 +140,15 @@
 				7B53A27C2B5D80B70003B559 /* View+ColorEffect.swift */,
 			);
 			path = ColorEffects;
+			sourceTree = "<group>";
+		};
+		7BBA25F52B5F180000358A2E /* DistortionEffects */ = {
+			isa = PBXGroup;
+			children = (
+				7BBA25F82B5F18F300358A2E /* Distortion.metal */,
+				7BBA25F62B5F182C00358A2E /* View+DistortionEffect.swift */,
+			);
+			path = DistortionEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBA25F92B5F18F300358A2E /* Distortion.metal in Sources */,
+				7BBA25F72B5F182C00358A2E /* View+DistortionEffect.swift in Sources */,
 				7B53A24B2B5D7EF50003B559 /* ContentView.swift in Sources */,
 				7B53A2492B5D7EF50003B559 /* MetalShadingApp.swift in Sources */,
 				7B53A27B2B5D808F0003B559 /* Color.metal in Sources */,
