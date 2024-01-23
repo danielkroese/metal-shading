@@ -10,5 +10,5 @@ float2 distortion(float2 position) {
 [[ stitchable ]]
 float2 wiggle(float2 position, float time) {
     return float2(position.x,
-                  position.y + 3 * (sin(2 * time + (position.x / 10))));
+                  position.y + 3 * (sin(15 * time + (position.x / 10))));
 }

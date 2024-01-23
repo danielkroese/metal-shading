@@ -18,13 +18,15 @@ struct WiggleShader: ViewModifier {
     private let verticalPadding = 50.0
     
     func body(content: Content) -> some View {
-        content
-            .padding(.vertical, verticalPadding)
-            .drawingGroup()
-            .distortionEffect(
-                shader,
-                maxSampleOffset: CGSize(width: .zero, height: verticalPadding)
-            )
+        TimelineView(.animation) { _ in
+            content
+                .padding(.vertical, verticalPadding)
+                .drawingGroup()
+                .distortionEffect(
+                    shader,
+                    maxSampleOffset: CGSize(width: .zero, height: verticalPadding)
+                )
+        }
     }
     
     private var shader: Shader {
