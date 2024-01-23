@@ -1,20 +1,20 @@
 import SwiftUI
 
 struct PixellationShader: ViewModifier {
-    @State var pixelSize: Float = 12
+    private let pixelSize: Float = 8
+    private let startDate = Date()
     
     func body(content: Content) -> some View {
-        content
-            .layerEffect(shader, maxSampleOffset: .zero)
-            .onAppear {
-                withAnimation(.easeInOut(duration: 2.0).repeatForever()) {
-                    pixelSize = 1
-                }
-            }
+        TimelineView(.animation) { _ in
+            content.layerEffect(shader, maxSampleOffset: .zero)
+        }
     }
     
     private var shader: Shader {
-        ShaderLibrary.pixellate(.float(pixelSize))
+        ShaderLibrary.pixellate(
+            .float(pixelSize),
+            .float(startDate.timeIntervalSinceNow)
+        )
     }
 }
 

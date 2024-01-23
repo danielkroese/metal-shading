@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 32) {
-            Image(systemName: "globe")
+            Image(systemName: "bicycle")
                         .font(.system(size: 200))
                         .pixellationShader()
             
