@@ -2,10 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(systemName: "globe")
-            .font(.system(size: 200))
-            .distortionShader()
-            .edgesIgnoringSafeArea(.all)
+        Text("Hello, world!")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .kerning(2)
+            .foregroundStyle(.green)
+            .wiggleShader()
     }
 }
 
