@@ -19,6 +19,9 @@ struct ContentView: View {
                 .hueRotation(hueRotation)
                 .wiggleShader()
         }
+        .background {
+            Color.white.colorShader()
+        }
         .onAppear {
             withAnimation(.easeInOut(duration: 3.0).repeatForever()) {
                 hueRotation = .degrees(360)
